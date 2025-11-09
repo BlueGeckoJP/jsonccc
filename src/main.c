@@ -79,6 +79,17 @@ advance(Lexer* lexer)
   lexer->current = lexer->input[lexer->pos];
 }
 
+Token
+create_token(enum token_type type, const char* value, int line, int column)
+{
+  Token token;
+  token.type = type;
+  snprintf(token.value, sizeof(token.value), "%s", value);
+  token.line = line;
+  token.column = column;
+  return token;
+}
+
 void
 skip_whitespace(Lexer* lexer)
 {
