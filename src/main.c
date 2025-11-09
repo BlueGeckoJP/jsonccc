@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 enum token_type
 {
@@ -9,16 +8,17 @@ enum token_type
   DQUOTE,
   COMMA,
 
-  // Key
-  Key,
-
   // Value types
-  String,
-  Number,
-  Boolean,
-  Null,
-  Array,
-  Object,
+  STRING,
+  NUMBER,
+  BOOLEAN,
+  NULL_TOKEN,
+
+  // EOF
+  EOF_TOKEN,
+
+  // Error
+  ERROR_TOKEN
 };
 
 typedef struct
