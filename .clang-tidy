@@ -1,0 +1,10 @@
+Checks: |
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  readability-*,
+  modernize-*,
+  performance-*,
+  bugprone-*,
+  -modernize-use-trailing-return-type
+HeaderFilterRegex: '.*'
+AnalyzeTemporaryDtors: false
